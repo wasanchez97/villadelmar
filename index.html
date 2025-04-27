@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sport Villa del Mar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="img/SportVillasf.png" alt="Logo Sport Villa del Mar" class="brand-logo" />
+    <h1>Sport Villa del Mar</h1>
+    <p>Pasión, garra y sabor a victoria</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="plantel.html">Plantel</a>
+    <a href="calendario.html">Calendario</a>
+
+  </nav>
+
+  <div class="banner">
+    ¡Bienvenidos a la página oficial de Sport Villa del Mar!
+  </div>
+
+  <main class="contenido">
+    <h2 class="title-notice">Últimas Noticias</h2>
+    <div class="carrusel-container" aria-label="Carrusel de últimas noticias" >
+      <div class="noticias">
+        <article class="noticia">
+          <img src="img/Campeon.jpg" alt="Campeon" class="photo" />
+          <h3>Sport Villa del Mar celebra su victoria</h3>
+          <p>El equipo se corona campeón en un emocionante partido.</p>
+        </article>
+
+        <article class="noticia">
+          <img src="img/Celebracióndelcampeon.jpg" alt="Entrenamiento" class="photo" />
+          <h3>Intensos entrenamientos preparan al equipo</h3>
+          <p>El equipo se somete a rigurosas sesiones de entrenamiento.</p>
+        </article>
+
+        <article class="noticia">
+          <img src="img/Tenchy.jpg" alt="Estadio"class="photo" />
+          <h3>¡Bienvenido Tenchy Ugaz!</h3>
+          <p>Jugador firmó con el equipo por dos temporadas.</p>
+        </article>
+
+        <article class="noticia">
+          <img src="img/Plantel2025.jpg" alt="Jugadores" />
+          <h3>Plantel 2025</h3>
+          <p>Sport Villa del Mar da la bienvenida a nuevos talentos.</p>
+        </article>
+
+       
+      </div>
+
+      <div class="puntos-carrusel" aria-label="Navegación de noticias">
+        <!-- Puntos se generan con JS -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+          <i class="bx bxl-tiktok"></i>
+        </a>
+      </div>
+      <a href="mailto:sportvilladm@gmail.com">sportvilladm@gmail.com</a>
+      <p class="copyrigth">&copy; 2025 SportVilla. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const noticias = document.querySelector('.noticias');
+      const puntosContainer = document.querySelector('.puntos-carrusel');
+      const noticiasItems = document.querySelectorAll('.noticia');
+      const totalNoticias = noticiasItems.length;
+      let indiceActual = 0;
+
+      // Crear puntos de navegación
+      for (let i = 0; i < totalNoticias; i++) {
+        const punto = document.createElement('button');
+        punto.classList.add('punto');
+        punto.setAttribute('data-index', i);
+        punto.setAttribute('aria-label', `Ir a la noticia ${i + 1}`);
+        punto.addEventListener('click', () => {
+          indiceActual = i;
+          moverCarrusel();
+          actualizarPuntos();
+        });
+        puntosContainer.appendChild(punto);
+      }
+
+      function moverCarrusel() {
+        const anchoNoticia = noticiasItems[0].offsetWidth;
+        noticias.style.transform = `translateX(-${indiceActual * anchoNoticia}px)`;
+      }
+
+      function actualizarPuntos() {
+        const puntos = document.querySelectorAll('.punto');
+        puntos.forEach((punto, i) => {
+          if (i === indiceActual) {
+            punto.classList.add('activo');
+          } else {
+            punto.classList.remove('activo');
+          }
+        });
+      }
+
+      // Inicializar el carrusel
+      moverCarrusel();
+      actualizarPuntos();
+
+      // Auto slide cada 5 segundos
+      setInterval(() => {
+        indiceActual = (indiceActual + 1) % totalNoticias;
+        moverCarrusel();
+        actualizarPuntos();
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
