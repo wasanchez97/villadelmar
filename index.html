@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <img src="img/SportVillasf.png" alt="Logo Sport Villa del Mar" class="brand-logo" />
@@ -16,10 +18,8 @@
 
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="historia.html">Historia</a>
     <a href="plantel.html">Plantel</a>
     <a href="calendario.html">Calendario</a>
-
   </nav>
 
   <div class="banner">
@@ -27,112 +27,254 @@
   </div>
 
   <main class="contenido">
-    <h2 class="title-notice">Últimas Noticias</h2>
-    <div class="carrusel-container" aria-label="Carrusel de últimas noticias" >
-      <div class="noticias">
-        <article class="noticia">
-          <img src="img/Campeon.jpg" alt="Campeon" class="photo" />
-          <h3>Sport Villa del Mar celebra su victoria</h3>
-          <p>El equipo se corona campeón en un emocionante partido.</p>
-        </article>
-
-        <article class="noticia">
-          <img src="img/Celebracióndelcampeon.jpg" alt="Entrenamiento" class="photo" />
-          <h3>Intensos entrenamientos preparan al equipo</h3>
-          <p>El equipo se somete a rigurosas sesiones de entrenamiento.</p>
-        </article>
-
-        <article class="noticia">
-          <img src="img/Tenchy.jpg" alt="Estadio"class="photo" />
-          <h3>¡Bienvenido Tenchy Ugaz!</h3>
-          <p>Jugador firmó con el equipo por dos temporadas.</p>
-        </article>
-
-        <article class="noticia">
-          <img src="img/Plantel2025.jpg" alt="Jugadores" />
-          <h3>Plantel 2025</h3>
-          <p>Sport Villa del Mar da la bienvenida a nuevos talentos.</p>
-        </article>
-
-       
+    <div class="partidos-container">
+      <div class="partido">
+        <div class="titulo-partido">Último Partido</div>
+        <div class="equipos">
+          <div class="equipo">
+            <img src="img/SportVillasf.png" alt="Sport Villa del Mar">
+            <div class="nombre-equipo">Sport Villa del Mar</div>
+          </div>
+          <div class="resultado">2 - 1</div>
+          <div class="equipo">
+            <img src="img/AlianzaLima.png" alt="Alianza Lima">
+            <div class="nombre-equipo">Alianza Lima</div>
+          </div>
+        </div>
+        <div class="info-partido">
+          <div class="fecha">26 de Abril, 2025</div>
+          <div class="estadio">Estadio Nacional</div>
+        </div>
+        <a href="#" class="boton-partido">Tabla de Posiciones</a>
       </div>
 
-      <div class="puntos-carrusel" aria-label="Navegación de noticias">
-        <!-- Puntos se generan con JS -->
+      <div class="partido">
+        <div class="titulo-partido">Próximo Partido</div>
+        <div class="equipos">
+          <div class="equipo">
+            <img src="img/SportVillasf.png" alt="Sport Villa del Mar">
+            <div class="nombre-equipo">Sport Villa del Mar</div>
+          </div>
+          <div class="vs">VS</div>
+          <div class="equipo">
+            <img src="img/Cristal.png" alt="Sporting Cristal">
+            <div class="nombre-equipo">Sporting Cristal</div>
+          </div>
+        </div>
+        <div class="info-partido">
+          <div class="fecha">3 de Mayo, 2025</div>
+          <div class="estadio">Estadio Alberto Gallardo</div>
+        </div>
+        <a href="#" class="boton-partido">Calendario</a>
       </div>
     </div>
   </main>
+  <h2 class="titulo-historia">Nuestra Historia</h2>
+  
+  <div class="timeline-container">
+    <div class="timeline">
+      <div class="timeline-item" data-slide="0">
+        <span class="year">2010</span>
+        <div class="dot"></div>
+      </div>
+      <div class="timeline-item" data-slide="1">
+        <span class="year">2015</span>
+        <div class="dot"></div>
+      </div>
+      <div class="timeline-item" data-slide="2">
+        <span class="year">2020</span>
+        <div class="dot"></div>
+      </div>
+      <div class="timeline-item" data-slide="3">
+        <span class="year">2024</span>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+  <section class="contenido-historia">
+  
+    <div class="carrusel-container historia-carrusel">
+      <div class="carrusel-track">
+  
+        <div class="carrusel-slide">
+          <img src="img/historia2.jpg" alt="Historia 2010">
+          <div class="texto-slide">
+            <h3>2010</h3>
+            <p>
+              Iniciamos nuestro viaje con la pasión de transformar sueños en realidades deportivas. Fue solo el principio de algo grande.
+              Aquel año, un grupo de entusiastas del fútbol se unió con el objetivo de crear un club diferente, basado en la amistad y
+              el esfuerzo colectivo. Los primeros entrenamientos se realizaron en canchas humildes, pero la energía y el compromiso nunca
+              faltaron. Poco a poco, fuimos sumando seguidores y contagiando nuestro entusiasmo a la comunidad local. Cada partido
+              representaba una oportunidad para aprender y crecer, tanto dentro como fuera del campo. Así nació la familia de Sport Villa
+              del Mar, con la convicción de que el deporte puede cambiar vidas.
+            </p>
+          </div>
+        </div>
+  
+        <div class="carrusel-slide">
+          <img src="img/historia1.jpg" alt="Historia 2015">
+          <div class="texto-slide">
+            <h3>2015</h3>
+            <p>
+              Consolidamos nuestro primer equipo y comenzamos a expandir nuestras fronteras, llevando el deporte a cada rincón. Este fue
+              un año de grandes retos, pero también de logros importantes para nuestra institución. Participamos en torneos locales y
+              regionales, obteniendo resultados que superaron nuestras expectativas iniciales. El apoyo de las familias y la comunidad fue
+              fundamental para seguir adelante y mantener viva la ilusión. Se sumaron nuevos talentos y el club empezó a ser reconocido por
+              su disciplina y valores. Nuestra identidad se fortaleció, y el sueño de llegar más lejos se hizo cada vez más real.
+            </p>
+          </div>
+        </div>
+  
+        <div class="carrusel-slide">
+          <img src="img/historia1.jpg" alt="Historia 2020">
+          <div class="texto-slide">
+            <h3>2020</h3>
+            <p>
+              Superamos los desafíos globales fortaleciendo nuestro compromiso con la excelencia y la pasión por el deporte. En medio de
+              tiempos difíciles, el club demostró resiliencia y una capacidad única para adaptarse a las circunstancias. Implementamos
+              entrenamientos virtuales y actividades solidarias para mantenernos conectados y activos. La unión del grupo fue clave para
+              enfrentar la adversidad y mantener el espíritu competitivo intacto. Aprendimos a valorar cada encuentro y a disfrutar del
+              fútbol como una herramienta de esperanza. Este año marcó un antes y un después en nuestra historia, consolidando nuestros
+              lazos como familia deportiva.
+            </p>
+          </div>
+        </div>
+  
+        <div class="carrusel-slide">
+          <img src="img/historia3.webp" alt="Historia 2024">
+          <div class="texto-slide">
+            <h3>2024</h3>
+            <p>
+              Hoy miramos al futuro con entusiasmo, construyendo una comunidad que cree en el poder del deporte para unir. Celebramos
+              nuestros logros y agradecemos a quienes han sido parte de este camino, desde jugadores hasta hinchas. El club se ha
+              convertido en un referente de valores, trabajo en equipo y perseverancia en la región. Seguimos apostando por la formación
+              de jóvenes talentos y la inclusión de todos en nuestras actividades. Nos preparamos para nuevos desafíos, con la certeza de
+              que juntos podemos alcanzar metas aún más ambiciosas. Sport Villa del Mar es más que un equipo: es una familia que nunca deja
+              de soñar.
+            </p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
 
   <footer>
     <div class="footer-content">
+      <div class="sponsors">
+        <div class="sponsor-logos">
+          <img src="img/LogoAdidas.webp" alt="Sponsor 1">
+          <img src="img/pepsi.png" alt="Sponsor 2">
+          <img src="img/teapuestologo.png" alt="Sponsor 3">
+        </div>
+      </div>
+
       <div class="social-icons">
-        <!-- Instagram -->
         <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
           <i class="bx bxl-instagram"></i>
         </a>
-        <!-- Facebook -->
         <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
           <i class="bx bxl-facebook"></i>
         </a>
-        <!-- TikTok -->
         <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
           <i class="bx bxl-tiktok"></i>
         </a>
       </div>
+
       <a href="mailto:sportvilladm@gmail.com">sportvilladm@gmail.com</a>
       <p class="copyrigth">&copy; 2025 SportVilla. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script>
+
+      // ==== Carrusel de Historia (sin puntos) ====
+      const historiaContainer = document.querySelector('.carrusel-container.historia-carrusel');
+      if (historiaContainer) {
+        const track = historiaContainer.querySelector('.carrusel-track');
+        const slides = Array.from(track.children);
+        let currentSlide = 0;
+        let historyAutoSlideInterval;
+  
+        function goToSlide(slideIndex) {
+          track.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+  
+        function startHistoryAutoSlide() {
+          historyAutoSlideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            goToSlide(currentSlide);
+          }, 4000);
+        }
+  
+        function stopHistoryAutoSlide() {
+          clearInterval(historyAutoSlideInterval);
+        }
+  
+        historiaContainer.addEventListener('mouseenter', stopHistoryAutoSlide);
+        historiaContainer.addEventListener('mouseleave', startHistoryAutoSlide);
+  
+        startHistoryAutoSlide();
+      }
+    ;
     document.addEventListener('DOMContentLoaded', () => {
-      const noticias = document.querySelector('.noticias');
-      const puntosContainer = document.querySelector('.puntos-carrusel');
-      const noticiasItems = document.querySelectorAll('.noticia');
-      const totalNoticias = noticiasItems.length;
-      let indiceActual = 0;
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const carruselTrack = document.querySelector('.carrusel-track');
+  const slides = Array.from(carruselTrack.children);
+  let currentSlide = 0;
 
-      // Crear puntos de navegación
-      for (let i = 0; i < totalNoticias; i++) {
-        const punto = document.createElement('button');
-        punto.classList.add('punto');
-        punto.setAttribute('data-index', i);
-        punto.setAttribute('aria-label', `Ir a la noticia ${i + 1}`);
-        punto.addEventListener('click', () => {
-          indiceActual = i;
-          moverCarrusel();
-          actualizarPuntos();
-        });
-        puntosContainer.appendChild(punto);
-      }
+  function showSlide(index) {
+    currentSlide = index;
+    carruselTrack.style.transform = `translateX(-${index * 100}%)`;
+    updateTimeline();
+  }
 
-      function moverCarrusel() {
-        const anchoNoticia = noticiasItems[0].offsetWidth;
-        noticias.style.transform = `translateX(-${indiceActual * anchoNoticia}px)`;
-      }
-
-      function actualizarPuntos() {
-        const puntos = document.querySelectorAll('.punto');
-        puntos.forEach((punto, i) => {
-          if (i === indiceActual) {
-            punto.classList.add('activo');
-          } else {
-            punto.classList.remove('activo');
-          }
-        });
-      }
-
-      // Inicializar el carrusel
-      moverCarrusel();
-      actualizarPuntos();
-
-      // Auto slide cada 5 segundos
-      setInterval(() => {
-        indiceActual = (indiceActual + 1) % totalNoticias;
-        moverCarrusel();
-        actualizarPuntos();
-      }, 5000);
+  function updateTimeline() {
+    timelineItems.forEach((item, i) => {
+      item.classList.toggle('active', i === currentSlide);
     });
+  }
+
+  timelineItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      showSlide(index);
+    });
+  });
+
+  // Inicializar la timeline
+  updateTimeline();
+
+  // Eventos de hover (opcional)
+  const historiaContainer = document.querySelector('.carrusel-container.historia-carrusel');
+  if (historiaContainer) {
+    let historyAutoSlideInterval;
+
+    function goToSlide(slideIndex) {
+      showSlide(slideIndex);
+    }
+
+    function startHistoryAutoSlide() {
+      historyAutoSlideInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+      }, 4000);
+    }
+
+    function stopHistoryAutoSlide() {
+      clearInterval(historyAutoSlideInterval);
+    }
+
+    historiaContainer.addEventListener('mouseenter', stopHistoryAutoSlide);
+    historiaContainer.addEventListener('mouseleave', startHistoryAutoSlide);
+
+    startHistoryAutoSlide();
+  }
+});
+
   </script>
+  
 </body>
+
 </html>
